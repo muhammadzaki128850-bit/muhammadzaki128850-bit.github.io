@@ -501,18 +501,22 @@
         }
     </script>
     <script type='text/javascript' src='//pl27886742.effectivegatecpm.com/3f/85/c3/3f85c37ef55fb270f30ac21b72b0c4ce.js'></script>
-    <script>
-// Cek apakah popunder sudah pernah ditampilkan di sesi ini
-if (!sessionStorage.getItem('popShown')) {
-  // Tandai bahwa popunder sudah muncul
-  sessionStorage.setItem('popShown', 'true');
-
-  // Buat elemen script untuk menjalankan iklan Adsterra
+   <script>
+// Fungsi untuk menampilkan Popunder
+function showPopunder() {
   var adScript = document.createElement('script');
   adScript.type = 'text/javascript';
   adScript.src = '//pl27887171.effectivegatecpm.com/08/4d/04/084d047c00b57bd2d12a46558fda54d4.js';
   document.body.appendChild(adScript);
 }
+
+// Tunggu 10 detik setelah halaman dibuka baru tampilkan iklan pertama
+setTimeout(function() {
+  showPopunder();
+
+  // Setelah itu tampilkan lagi setiap 5 menit
+  setInterval(showPopunder, 5 * 60 * 1000);
+}, 10000);
 </script>
 
 </body>
